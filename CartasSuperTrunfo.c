@@ -29,7 +29,7 @@ int main() {
     scanf("%d", &CodigoDaCidade);
 
     printf("Insira o nome da cidade: ");
-    scanf("%s", NomeDaCidade);
+    scanf("%s[^\n]", NomeDaCidade);
 
     printf("Populacao: ");
     scanf("%d", &Populacao);
@@ -55,7 +55,7 @@ int main() {
     scanf("%d", &CodigoDaCidade1);
 
     printf("Insira o nome da cidade: ");
-    scanf("%s", NomeDaCidade1);
+    scanf("%s[^\n]", &NomeDaCidade1);
 
     printf("Populacao: ");
     scanf("%d", &Populacao1);
@@ -95,6 +95,56 @@ int main() {
     printf("Densidade populacional: %.2f hab/km²\n", DensidadePopulacional1);
     printf("PIB per capita: %.2f\n", PIBPerCapita1);
     
+    printf("\n=== BATALHA DAS CARTAS ===\n");
+    //comparacao das cartas
+    if (Populacao > Populacao1) {
+        //se a condicao for verdadeira
+        printf("Populacao: Carta A venceu\n");
+    }else {
+        //se a condicao for falsa
+        printf("Populacao: Carta B venceu\n");  
+    }
+     
+    if (Area > Area1) {
+        //se a condicao for verdadeira
+        printf("Area: Carta A venceu\n");
+    }else {
+        //se a condicao for falsa
+        printf("Area: Carta B venceu\n");  
+    }
+
+    if (PIB > PIB1) {
+        //se a condicao for verdadeira
+        printf("PIB: Carta A venceu\n");
+    }else {
+        //se a condicao for falsa
+        printf("PIB: Carta B venceu\n");  
+    }
+
+    if (NumeroDePontosTuristicos > NumeroDePontosTuristicos1) {
+        //se a condicao for verdadeira
+        printf("Numero de pontos turisticos: Carta A venceu\n");
+    }else {
+        //se a condicao for falsa
+        printf("Numero de pontos turisticos: Carta B venceu\n");  
+    }
+    
+    if (DensidadePopulacional <= DensidadePopulacional1) {
+        //se a condicao for verdadeira
+        printf("DensidadePopulacional: Carta A venceu\n");
+    }else {
+        //se a codicao for falsa
+        printf("DensidadePopulacional: Carta B venceu\n");  
+    }
+
+    if (PIBPerCapita > PIBPerCapita1) {
+        //se a condicao for verdadeira
+        printf("PIBPerCapita: Carta A venceu\n");
+    }else {
+        //se a codicao for falsa
+        printf("PIBPerCapita: Carta B venceu\n");  
+    }
+
     return 0;
 }
 
